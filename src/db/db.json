@@ -8,8 +8,84 @@
       "avatar": "http",
       "createdAt": 1571213104370,
       "id": "Z2hlvDmLOSRZGebC_Z_aA"
+    },
+    {
+      "email": "mail",
+      "password": "password",
+      "role": "ADMIN",
+      "verified": false,
+      "avatar": "http",
+      "createdAt": 1681827866113,
+      "id": "SmAzChpd95QKLuGxH6L-j"
     }
   ],
-  "posts": [],
+  "posts": [
+    {
+      "message": "HAHA YES",
+      "author": "SmAzChpd95QKLuGxH6L-j",
+      "createdAt": 1681828175735,
+      "id": "b4cuawNsx5RxleM1m3Ei6"
+    },
+    {
+      "message": "HAHA YES",
+      "author": "SmAzChpd95QKLuGxH6L-j",
+      "createdAt": 1681828211865,
+      "id": "cfqWWHQ1jJIRrYhsQCN-4"
+    },
+    {
+      "message": "HAHA YES",
+      "author": "SmAzChpd95QKLuGxH6L-j",
+      "createdAt": 1681828218252,
+      "id": "CeK-zBQDCNq9ZC4RAVdZV"
+    },
+    {
+      "message": "HAHA YES",
+      "author": "SmAzChpd95QKLuGxH6L-j",
+      "createdAt": 1681828224815,
+      "id": "ULYf95A2FDzmCuABIvHWF"
+    },
+    {
+      "message": "HAHA YES",
+      "author": "SmAzChpd95QKLuGxH6L-j",
+      "createdAt": 1681828234785,
+      "id": "ojkxMDXjMIcvg7V379Wvr"
+    },
+    {
+      "message": "HAHA YES",
+      "author": "SmAzChpd95QKLuGxH6L-j",
+      "createdAt": 1681828257473,
+      "id": "15DLV0oyc1Urdu5g1I_5e"
+    },
+    {
+      "message": "HAHA YES",
+      "author": "SmAzChpd95QKLuGxH6L-j",
+      "createdAt": 1681828264905,
+      "id": "4Bd9cEAflHmQE_-TDB00h"
+    },
+    {
+      "message": "HAHA YES",
+      "author": "SmAzChpd95QKLuGxH6L-j",
+      "createdAt": 1681828329333,
+      "id": "60kw66G1OIWfE2N59wk4Y"
+    },
+    {
+      "message": "HAHA YES",
+      "author": "SmAzChpd95QKLuGxH6L-j",
+      "createdAt": 1681828530302,
+      "id": "nKfEW7XmRIeD3jcBYv9b0"
+    },
+    {
+      "message": "HAHA YES",
+      "author": "SmAzChpd95QKLuGxH6L-j",
+      "createdAt": 1681828533475,
+      "id": "Y6YM-VfjozyCVDwFDADB8"
+    },
+    {
+      "message": "HAHA YES",
+      "author": "SmAzChpd95QKLuGxH6L-j",
+      "createdAt": 1681828536770,
+      "id": "_W8Vydm5kfpRjPbYPMqKR"
+    }
+  ],
   "settings": []
 }

@@ -1,4 +1,4 @@
-const gql = require('graphql-tag')
+const gql = require('graphql-tag');
 
 module.exports = gql`
   enum Theme {
@@ -12,12 +12,15 @@ module.exports = gql`
     GUEST
   }
 
+  directive @formatDate(format: String = "yyyy/MM/dd") on FIELD_DEFINITION
+  directive @authenticate on FIELD_DEFINITION
+  directive @authorize(role: Role = MEMBER) on FIELD_DEFINITION
   type User {
     id: ID!
     email: String!
     avatar: String!
     verified: Boolean!
-    createdAt: String!
+    createdAt: String! @formatDate(format: "dd/MM/yyyy")
     posts: [Post]!
     role: Role!
     settings: Settings!
@@ -32,7 +35,7 @@ module.exports = gql`
     id: ID!
     message: String!
     author: User!
-    createdAt: String!
+    createdAt: String! @formatDate
     likes: Int!
     views: Int!
   }
@@ -48,7 +51,7 @@ module.exports = gql`
   type Invite {
     email: String!
     from: User!
-    createdAt: String!
+    createdAt: String! @formatDate
     role: Role!
   }
 
@@ -85,20 +88,23 @@ module.exports = gql`
   }
 
   type Query {
-    me: User!
-    posts: [Post]!
-    post(id: ID!): Post!
-    userSettings: Settings!
+    me: User! @authenticate
+    posts: [Post]! @authenticate
+    post(id: ID!): Post! @authenticate
+    userSettings: Settings! @authenticate
     feed: [Post]!
   }
 
   type Mutation {
-    updateSettings(input: UpdateSettingsInput!): Settings!
-    createPost(input: NewPostInput!): Post!
-    updateMe(input: UpdateUserInput!): User
-    invite(input: InviteInput!): Invite!
+    updateSettings(input: UpdateSettingsInput!): Settings! @authenticate
+    createPost(input: NewPostInput!): Post! @authenticate
+    updateMe(input: UpdateUserInput!): User @authenticate
+    invite(input: InviteInput!): Invite! @authorize(role: ADMIN)
     signup(input: SignupInput!): AuthUser!
     signin(input: SigninInput!): AuthUser!
   }
 
-`
+  type Subscription {
+    newPost: Post! @authenticate
+  }
+`;
